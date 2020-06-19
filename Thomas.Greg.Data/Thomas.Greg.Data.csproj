@@ -26,4 +26,8 @@
     <Folder Include="NHibernateData\Repository\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Thomas.Greg.Aplicacao\Thomas.Greg.Aplicacao.csproj" />
+  </ItemGroup>
+
 </Project>
