@@ -9,7 +9,7 @@ namespace Thomas.Greg.Data.NHibernateData.Mapping
         {
             Table("LOGRADOURO");
 
-            Id(m => m.Id, "ID");
+            Id(m => m.Id);
             Map(m => m.Logradouro, "LOGRADOURO");
             Map(m => m.Municipio, "MUNICIPIO");
             Map(m => m.Numero, "NUMERO");
@@ -17,7 +17,7 @@ namespace Thomas.Greg.Data.NHibernateData.Mapping
             Map(m => m.Cep, "CEP");
             Map(m => m.Bairro, "BAIRRO");
             Map(m => m.Complmento, "COMPLEMENTO");
-            References(r => r.Cliente, "IdCliente");
+            References(r => r.Cliente, "ID_CLIENTE");
         }
     }
 }

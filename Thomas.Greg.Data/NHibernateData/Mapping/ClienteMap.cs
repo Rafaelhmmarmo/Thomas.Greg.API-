@@ -9,10 +9,10 @@ namespace Thomas.Greg.Data.NHibernateData.Mapping
         {
             Table("CLIENTE");
 
-            Id(m => m.Id, "ID");
+            Id(m => m.Id, "ID_CLIENTE");
             Map(m => m.Nome, "NOME");
             Map(m => m.Email, "EMAIL");
-            HasMany(m => m.Logradouro);
+            HasMany(m => m.Logradouro).Cascade.SaveUpdate();
         }
     }
 }

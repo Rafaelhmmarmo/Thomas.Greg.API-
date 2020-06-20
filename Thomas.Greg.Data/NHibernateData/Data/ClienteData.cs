@@ -8,6 +8,6 @@ namespace Thomas.Greg.Data.NHibernateData.Data
 
         public virtual string Email { get; set; }
 
-        public virtual List<LogradouroData> Logradouro { get; set; }
+        public virtual IList<LogradouroData> Logradouro { get; set; }
     }
 }

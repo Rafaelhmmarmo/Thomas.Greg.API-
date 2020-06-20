@@ -10,6 +10,6 @@ namespace Thomas.Greg.Aplicacao.Entidades
 
         public string Email { get; set; }
 
-        public List<LogradouroModel> Logradouro { get; set; }
+        public IList<LogradouroModel> Logradouro { get; set; }
     }
 }

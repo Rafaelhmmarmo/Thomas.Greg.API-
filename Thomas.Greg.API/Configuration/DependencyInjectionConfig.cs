@@ -10,7 +10,7 @@ namespace Thomas.Greg.API.Configuration
     {
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
         {
-            services.AddScoped<IClienteApplication, ClienteApplication>();
+            services.AddScoped<IClienteAplicacao, ClienteAplicacao>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
 
             return services;

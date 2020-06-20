@@ -26,7 +26,7 @@ namespace Thomas.Greg.Data.NHibernateData.Conexao
 
             config
                 .ExposeConfiguration(ass => new SchemaExport(ass)
-                .Create(false, true))
+                .Create(true, true))
                 .BuildConfiguration();
         }
 
