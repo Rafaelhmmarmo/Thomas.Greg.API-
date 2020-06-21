@@ -9,7 +9,7 @@ namespace Thomas.Greg.Data.NHibernateData.Mapping
         {
             Table("LOGRADOURO");
 
-            Id(m => m.Id);
+            Id(m => m.Id, "LOGRADOURO_ID");
             Map(m => m.Logradouro, "LOGRADOURO");
             Map(m => m.Municipio, "MUNICIPIO");
             Map(m => m.Numero, "NUMERO");
@@ -17,7 +17,7 @@ namespace Thomas.Greg.Data.NHibernateData.Mapping
             Map(m => m.Cep, "CEP");
             Map(m => m.Bairro, "BAIRRO");
             Map(m => m.Complmento, "COMPLEMENTO");
-            References(r => r.Cliente, "ID_CLIENTE");
+            References(r => r.Cliente, "ID_CLIENTE").Cascade.Delete().ForeignKey().Nullable();
         }
     }
 }

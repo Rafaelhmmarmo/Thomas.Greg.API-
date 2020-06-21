@@ -21,7 +21,7 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
             var session = NHibernateConexao.GetSessionLocal();
             var resultado = session.Query<ClienteData>().ToList();
             session.Close();
-            return _mapper.Map<List<ClienteModel>>(resultado);
+            return _mapper.Map<IList<ClienteModel>>(resultado);
         }
 
         public ClienteModel RetornarPorId(int id)
@@ -34,13 +34,13 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
                 .ToList();
 
             session.Close();
+
             return _mapper.Map<ClienteModel>(resultado.FirstOrDefault());
         }
       
         public bool ExcluirPorId(int id)
         {
             var session = NHibernateConexao.GetSessionLocal();
-            var objeto = RetornarPorId(id, session);
             var trans = session.BeginTransaction();
 
             try
@@ -104,16 +104,7 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
                 session.Close();
                 return false;
             }
-        }
-        private ClienteModel RetornarPorId(int id, ISession session)
-        {
-            var resultado = session
-                .Query<ClienteData>()
-                .Where(w => w.Id == id)
-                .ToList();
-
-            return _mapper.Map<ClienteModel>(resultado.FirstOrDefault());
-        }
+        }       
 
         private bool VerificaEmail(string email, ISession session)
         {

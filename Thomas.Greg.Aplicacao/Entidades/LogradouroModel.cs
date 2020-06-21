@@ -2,20 +2,20 @@
 {
     public class LogradouroModel : DataModel
     {
-        public virtual string Logradouro { get; set; }
+        public  string Logradouro { get; set; }
 
-        public virtual int Cep { get; set; }
+        public  int Cep { get; set; }
 
-        public virtual int Numero { get; set; }
+        public  int Numero { get; set; }
 
-        public virtual string Complmento { get; set; }
+        public  string Complmento { get; set; }
 
-        public virtual string Uf { get; set; }
+        public  string Uf { get; set; }
 
-        public virtual string Municipio { get; set; }
+        public  string Municipio { get; set; }
 
-        public virtual string Bairro { get; set; }
+        public  string Bairro { get; set; }
 
-        public virtual ClienteModel Cliente { get; set; }
+        public  ClienteModel Cliente { get; set; }
     }
 }
