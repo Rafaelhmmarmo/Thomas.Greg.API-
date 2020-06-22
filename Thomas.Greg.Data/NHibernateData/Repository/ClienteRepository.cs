@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using NHibernate;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Thomas.Greg.Aplicacao.Entidades;
@@ -50,7 +49,7 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
                 session.Close();
                 return true;
             }
-            catch(Exception ex)
+            catch
             {
                 trans.Rollback();
                 session.Close();
@@ -60,8 +59,7 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
 
         public bool Gravar(ClienteModel objeto)
         {
-            NHibernateConexao.GeraSchema();
-
+            
             var session = NHibernateConexao.GetSessionLocal();
             var trans = session.BeginTransaction();
             var cliente = _mapper.Map<ClienteData>(objeto);
@@ -75,7 +73,7 @@ namespace Thomas.Greg.Data.NHibernateData.Repository
                     session.Close();
                     return true;
                 }
-                catch(Exception ex)
+                catch
                 {
                     trans.Rollback();
                     session.Close();

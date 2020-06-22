@@ -12,6 +12,10 @@ namespace Thomas.Greg.API.Configuration
         {
             services.AddScoped<IClienteAplicacao, ClienteAplicacao>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<ILogradouroAplicacao, LogradouroAplicacao>();
+            services.AddScoped<ILogradouroRepository, LogradouroRepository>();
+            services.AddScoped<IDbAplicacao, DbAplicacao>();
+            services.AddScoped<IDbRepository, DbRepository>();
             services.AddScoped<IAcessoAplicacao, AcessoAplicacao>();
 
             return services;
