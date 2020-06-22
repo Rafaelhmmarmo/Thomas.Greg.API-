@@ -79,6 +79,8 @@ namespace Thomas.Greg.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseSwagger();

@@ -23,10 +23,8 @@ namespace Thomas.Greg.API.Configuration
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidAudience = "https://localhost",
-                    ValidIssuer = "Thomas.Greg",
+                    ValidateIssuer = false,
+                    ValidateAudience = false
                 };
             });
 
